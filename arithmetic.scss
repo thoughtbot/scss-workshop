@@ -1,0 +1,12 @@
+.box-1 {
+  width: (20px + 30px);
+  height: (30px * 2);
+  max-width: (60px / 2);
+  max-height: (40px - 20px);
+  line-height: (40px % 7);
+}
+
+.box-2 {
+  width: (20px + 30px) - (60px / 2);
+  height: ((30px * 2)  * 3);
+}
