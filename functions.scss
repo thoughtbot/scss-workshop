@@ -1,0 +1,10 @@
+@function percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+div {
+  $container-width: 1000px;
+  width: percent(200px, $container-width);
+}
+
+// percent(10, 100);
