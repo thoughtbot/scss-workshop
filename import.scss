@@ -1,5 +1,10 @@
 @import "extends";
+@import "partial";
 
 .box-4 {
   @extend %centered;
+}
+
+.box-5 {
+  @extend %left-aligned;
 }
