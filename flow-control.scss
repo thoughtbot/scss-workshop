@@ -1,0 +1,71 @@
+// @if
+
+@if 2 == 1 {
+  .nope {
+    color: red;
+  }
+}
+
+@function is-odd($number) {
+  @return $number % 2 == 0;
+}
+
+$countries: "usa", "japan", "china", "france";
+
+@if is-odd(length($countries)) {
+  .is-odd {
+    width: 100%;
+  }
+} @else {
+  .is-even {
+    width: 50%;
+  }
+}
+
+// Don't use @if for variable for intropsection
+
+// @if $non-existant {
+//   div { color: red }
+// }
+
+
+// @for
+
+@for $i from 1 to 3 {
+  .box-#{$i} {
+    content: 10px * $i;
+  }
+}
+
+@for $i from 1 through 3 {
+  .alt-box-#{$i} {
+    content: 10px * $i;
+  }
+}
+
+// @each
+$category-colors: ("news": #558899, "sport": #182939, "art": #C7D829);
+
+@each $country in $countries {
+  .#{$country} {
+    content: 10px * index($countries, $country);
+  }
+}
+
+@each $category, $color in $category-colors {
+  .#{$category} {
+    color: $color;
+  }
+}
+
+// @while
+
+$column: 4;
+
+@while $column > 0 {
+  .cols-#{$column} {
+    width: 10px * $column;
+  }
+
+  $column: $column - 2;
+}
