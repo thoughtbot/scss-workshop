@@ -1,0 +1,45 @@
+// CSS
+
+.parent .child {
+  color: white;
+}
+
+// Nesting in SCSS
+
+.parent {
+  .child {
+    color: white;
+  }
+}
+
+.parent {
+  .child {
+    .grand-child {
+      color: gray;
+    }
+  }
+}
+
+// &
+
+.element {
+  &::after {
+    color: gray;
+  }
+}
+
+.child {
+  .parent & {
+    color: white;
+  }
+}
+
+// @at-root
+
+.parent {
+  .child {
+    @at-root .grand-child {
+      color: gray;
+    }
+  }
+}
