@@ -1,0 +1,18 @@
+$true: true;
+$false: false;
+
+.and {
+  content: $true and $false;
+}
+
+.or {
+  content: $true or $false;
+}
+
+.not {
+  content: not $true;
+}
+
+.combined {
+  content: not ($true and $false) or $false;
+}
