@@ -1,0 +1,65 @@
+// Define a list
+
+$countries: "usa", "japan", "china", "france", "sweden";
+$countries: "usa" "japan" "china" "france" "sweden";
+
+// Inspect a list
+
+.selector {
+  length: length($countries);
+  content: nth($countries, 1); // Starts at 1
+  index: index($countries, "france");
+}
+
+// Add element to a list
+
+$countries: append($countries, "mexico");
+
+.append {
+  content: $countries;
+}
+
+// Join lists
+
+$more-countries: "egypt", "thailand";
+
+.join {
+  content: join($countries, $more-countries);
+}
+
+// Define a map
+
+$category-colors: ("news": #558899, "sport": #182939, "art": #C7D829);
+
+// Get a value
+
+.news {
+  color: map-get($category-colors, news);
+  background-color: map-get($category-colors, "news");
+}
+
+// Check if a map has a value
+
+.has-key {
+  content: map-has-key($category-colors, economy);
+  content: map-has-key($category-colors, sport);
+}
+
+// Remove key-value pair
+
+$category-colors: map-remove($category-colors, news);
+
+.remove {
+  content: $category-colors;
+}
+
+// Merge maps (also used to add a new pair)
+
+$economy: ("economy": #3549DD);
+$category-colors: map-merge($category-colors, $economy);
+
+.merge {
+  content: $category-colors;
+}
+
+
