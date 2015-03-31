@@ -1,0 +1,9 @@
+$color: red;
+$padding: 1em;
+
+.#{$color}-box {
+  color: $color;
+  width: calc(100px - #{$padding});
+  content: "Color is #{$color}";
+  // height: calc(100px - $padding);
+}
