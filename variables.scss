@@ -1,0 +1,50 @@
+// Example
+
+$border: 1px solid gray;
+
+section {
+  border-top: $border;
+  border-bottom: $border;
+}
+
+// Composability
+
+$color: tomato;
+$border-width: 2px;
+
+$border: $border-width solid $color;
+
+section {
+  border-top: $border;
+  border-bottom: $border;
+}
+
+// Scope & !global
+
+section {
+  $inner-color: black;
+  color: $color;
+}
+
+div {
+  // color: $inner-color;
+}
+
+section {
+  $global-inner-color: black !global;
+  color: $color;
+}
+
+div {
+  color: $global-inner-color;
+}
+
+// !default
+
+$my-color: blue;
+$my-color: green !default;
+
+.my-colored-div {
+  // background-color: $my-color;
+}
+
