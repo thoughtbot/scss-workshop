@@ -1,0 +1,20 @@
+%centered {
+  text-align: center;
+  margin: auto;
+}
+
+.box-1 {
+  @extend %centered;
+}
+
+.box-2 {
+  @extend %centered;
+}
+
+.box-3 {
+  @extend .box-1;
+}
+
+// .box-4 {
+//   @extend .box-5;
+// }
