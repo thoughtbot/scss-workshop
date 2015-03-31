@@ -1,0 +1,5 @@
+@import "extends";
+
+.box-4 {
+  @extend %centered;
+}
